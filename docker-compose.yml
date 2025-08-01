@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  joomla:
+    image: joomla
+    ports:
+      - "8080:80"
+    depends_on:
+      - joomladb
+    environment:
+      JOOMLA_DB_HOST: joomladb
+      JOOMLA_DB_USER: root
+      JOOMLA_DB_PASSWORD: my-secret-pw
+      JOOMLA_DB_NAME: joomla
+    volumes:
+      - ./joomla:/var/www/html
+
+  joomladb:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: joomla
+    volumes:
+      - ./mysql:/var/lib/mysql
