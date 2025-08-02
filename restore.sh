@@ -47,5 +47,7 @@ gunzip -c "$SQL_FILE" | docker exec -i "$DB_CONTAINER" sh -c 'mysql -uroot -p"my
 # Clean up
 rm -rf "$TEMP_DIR"
 
+sudo docker compose restart joomla
+
 echo "Joomla Restored :)"
 
