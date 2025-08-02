@@ -101,6 +101,19 @@ sudo ./cleanup.sh
 
 ---
 
+
+## Technology Used
+
+| Technology / Tool | Purpose                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| **Joomla**     | CMS (Content Management System) to build and manage the website         |
+| **Docker**     | Containerization platform to run Joomla and MySQL in isolated environments |
+| **MySQL**      | Relational database used to store Joomla data                           |
+| **Bash Scripts (.sh)** | Automate setup, startup, backup, restore, and cleanup tasks             |
+| **Tar + Gzip (.tar.gz)** | Archive format used to back up files and database                       |
+| **mysqldump / mysql CLI** | Export and import MySQL database during backup/restore                  |
+
+
 ## Notes
 
 - All commands must be run with `sudo` due to Docker permission requirements.
