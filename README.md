@@ -56,7 +56,7 @@ In case you want to set up a fresh start follow the following steps:
 * Setup admin account
 * Setup Database
 
-![database.png](database.png)
+![database.png](git_imgs/database.png)
 
 Fill out your database info as shown in the picture above (Or u can change the docker-compose.yml to set your custom values)
 
