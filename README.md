@@ -30,6 +30,7 @@ This project provides an easy way to run and manage a Joomla website using Docke
 ```bash
 git clone https://github.com/ChickenStyle/JoomlaFinalProject.git
 cd JoomlaFinalProject
+chmod +x setup.sh backup.sh cleanup.sh restore.sh start.sh
 ```
 
 2. **Run setup**
@@ -71,6 +72,22 @@ sudo ./backup.sh
 ```
 
 Saves a compressed archive with Joomla files and database into the `backups/` folder.
+
+---
+
+## Stop the Containers
+In case u want to stop the webserver use the following command in the docker-compose.yml directory:
+```aiignore
+sudo docker compose down
+```
+
+---
+
+## Start the Containers
+Run this command to start the Joomla and mysql:
+```aiignore
+sudo ./start.sh
+```
 
 ---
 
